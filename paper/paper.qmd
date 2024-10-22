@@ -1,0 +1,101 @@
+---
+title: "Kamala Harris' Popular Vote Support in the 2024 US Election"
+subtitle: ""
+author: 
+  - Justin Klip
+  - Dhruv Gupta
+thanks: "Code and data are available at: [https://github.com/justinklip/usa-election-forecast-2024](https://github.com/justinklip/usa-election-forecast-2024)."
+date: today
+date-format: long
+abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+```
+
+# Introduction
+
+Why it matters paragraph: Owing to the USA's economic prowess, the American election every 4 years is one of, if not the most, important election in the modern world. Due to this, political scientists and pollsters work tirelessly in order to provide an accurate forecasting of the election. That being said, in 2016 countless pollsters were unable to correctly predict it's eventual winner. This raised questions about the legitimacy of polls and made me pollsters reevaluate what metrics they use to predict elections [@election_forecasts_nytimes].
+
+Overview paragraph: In this paper, we generate a model using a poll of polls approach outlined in [@blumenthal2014polls] order to predict popular support for Kamala Harris in the 2024 US election.
+
+Estimand paragraph: The estimand of interest in this paper is simply the popular support in percentage of Kamala Harris for the 2024 paper. With this popular support model built, other researchers can build and try to extend this model to look at electoral college forecasts.
+
+Results paragraph:
+
+Telegraphing paragraph: The remainder of this paper is structured as follows. @sec-data provides an overview of how the data was obtained and cleaned. It also provides a detailed section on measurement and our outcome variables of interest. @sec-model describes the setup of the model and the rationale behind it. @sec-discussion interprets the results and their validity.
+
+# Data {#sec-data}
+
+## Overview
+
+We use the statistical programming language R [@citeR] to run our analyses. Our data comes from 538's general presidential poll data for the 2024 election cycle. It contains all large presidential controls that meet certain criteria (this is discussed in @sec-measurement) [@president_general_polls_538]. Following @tellingstories, we consider use R packages to clean the data such as:
+
+Overview text
+
+## Measurement
+
+Since this paper makes use of multiple polls and polling types, there is a lot of variance in how the data in this data set may measure their data. They do, however, generally fall under the same principles of polling when trying to obtain this data.
+
+Firstly, a pollster (such as YouGov, Siena/NYT and others) will conduct the poll in the real world. We document how one pollster (YouGov) conducts their poll in the specific in the @sec-pollster-methodology section. When this poll is complete, FiveThirtyEight collects the polling data from these pollsters. They collect any publicly available data that meets the following criteria: the poll has the name of the pollster, survey dates, sample sizes, and details of population sample. The data must also answer questions about their medium of survey, source of files, weighting, and funding [@fiveThirtyEight2020].
+
+## Outcome variables
+
+
+## Predictor variables
+
+# Model {#sec-model}
+
+## Model set-up
+
+
+We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
+
+### Model justification
+
+# Results {#sec-results}
+
+# Discussion {#sec-discussion}
+
+## First discussion point {#sec-first-point}
+
+
+## Second discussion point
+
+
+## Third discussion point
+
+## Weaknesses and next steps
+
+
+\newpage
+
+\appendix
+
+# Appendix {.unnumbered}
+
+# Additional data details
+
+This paper does not have an accompanying download for the data script, but the data was from @president_general_polls_538. It was downloaded by navigating the website in the citation, filtering to "President: General Election", "National" and "2024" for poll type, state, and cycle respectively. We then pressed download and saved the csv to our raw data folder.
+
+# Pollster Methodology and Evaluation {#sec-pollster-methodology}
+
+# Model details
+
+## Posterior predictive check
+
+
+## Diagnostics
+
+
+\newpage
+
+# References
